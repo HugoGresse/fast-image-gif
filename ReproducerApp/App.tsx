@@ -7,6 +7,7 @@
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
+import FastImage from "@d11/react-native-fast-image";
 import {
   ScrollView,
   StatusBar,
@@ -83,6 +84,13 @@ function App(): React.JSX.Element {
         <View style={{paddingRight: safePadding}}>
           <Header/>
         </View>
+        <FastImage
+            style={{
+                height:  100,
+                width:  100,
+            }}
+            source={require('./plantnet-loading.gif')}
+        />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
